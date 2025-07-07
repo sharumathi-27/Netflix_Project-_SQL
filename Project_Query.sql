@@ -119,8 +119,7 @@ FROM Netflix
 GROUP BY genre;
 
 
--- 10. Find each year and the average numbers of content release by India on Netflix ,
--- return top 5 with highest avg content release
+-- 10. Find each year and the average numbers of content release by India on Netflix , return top 5 with highest avg content release
 
 SELECT EXTRACT(YEAR FROM date)as year,
 COUNT(*) as yearly_content,
@@ -152,8 +151,7 @@ WHERE casts LIKE '%Salman Khan%' AND
 release_year::numeric > EXTRACT(YEAR from CURRENT_DATE) - 10;
 
 
---14. Find the top 10 actors who have appeared in the highest number of movies produced 
--- in India 
+--14. Find the top 10 actors who have appeared in the highest number of movies produced in India 
 
 SELECT COUNT(*),
 UNNEST(STRING_TO_ARRAY(casts, ',' )) AS actors FROM Netflix
@@ -163,9 +161,7 @@ ORDER BY COUNT(*) DESC
 LIMIT(10);
 
 
--- 15. Categorize the content based on the presence of the keywords 'kill' and 'violence'
--- in the description field and Label content containing these keywords as 'bad' and all 
--- other content as 'good'. Count how many items fall into each category
+-- 15. Categorize the content based on the presence of the keywords 'kill' and 'violence' in the description field and Label content containing these keywords as 'bad' and all other content as 'good'. Count how many items fall into each category
 
 WITH new_table
 AS 
