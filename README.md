@@ -11,5 +11,5 @@ This project involves a comprehensive analysis of Netflix's movies and TV shows 
 . Listed and analyzed content based on release years, countries, and durations.
 . Explored and categorized content based on specific criteria and keywords
 
-## Dataset:
+## Dataset
 *Dataset link:*[movies Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
